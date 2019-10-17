@@ -37,7 +37,7 @@ module.exports = ({ richEmbed: RichEmbed }) => ({
         styles,
         ...descriptionInfo
     }) => {
-        if (!name || !url || !memberSince || !styles || Object.keys(descriptionInfo).length === 0) {
+        if (!name && !url && !memberSince && !styles && Object.keys(descriptionInfo).length === 0) {
             throw new Error('Unknown user!');
         }
         const result = new RichEmbed()

@@ -21,7 +21,9 @@
   "scripts": {
     "start": "npx sequelize db:migrate && node app.js dev",
     "start-prod": "NODE_ENV=production npx sequelize db:migrate && node app.js prod",
-    "test": "jest --watchAll"
+    "test": "jest",
+    "test:watch": "jest --watchAll",
+    "test:coverage": "jest --collect-coverage"
   },
   "author": "Kyle Lanmon",
   "license": "ISC"
