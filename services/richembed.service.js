@@ -37,6 +37,9 @@ module.exports = ({ richEmbed: RichEmbed }) => ({
         styles,
         ...descriptionInfo
     }) => {
+        if (!name || !url || !memberSince || !styles || Object.keys(descriptionInfo).length === 0) {
+            throw new Error('Unknown user!');
+        }
         const result = new RichEmbed()
             .setColor('#7286D5')
             .setAuthor(name, mountainProjectIconUrl, url)
